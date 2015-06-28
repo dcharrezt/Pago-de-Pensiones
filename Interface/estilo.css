@@ -1,0 +1,16 @@
+#menu{
+	height:35px;
+    width:1333px;
+    
+}
+.tabs{
+	cursor: pointer;
+	text-align:center;
+	border:1px dashed #C6C2C2;
+	display:inline-block;
+	height:20px;
+	width:163px;
+}
+.opciones{
+	margin:auto;
+}
