@@ -1,3 +1,6 @@
+body{
+	
+}
 #menu{
 	height:35px;
     width:1333px;
@@ -6,10 +9,13 @@
 .tabs{
 	cursor: pointer;
 	text-align:center;
-	border:1px dashed #C6C2C2;
+	border:1px dashed #A30000;
 	display:inline-block;
 	height:20px;
 	width:163px;
+}
+.blockdinamic{
+	display:none;
 }
 .opciones{
 	margin:auto;

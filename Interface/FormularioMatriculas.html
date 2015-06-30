@@ -2,27 +2,31 @@
 <html lang="es">
 	<head>
 		<link rel="stylesheet" href="estilo.css">
+		<script src="logica.js" language="javascript" type="text/javascript"></script>
 		<title>Ficha de Regisro de Matricula</title>
 	</head>
 	<body>
 		<div id="menu">
-			<div class="tabs" id="opc1">
+			<div class="tabs" id="opc1" onmouseover="cambiar(1)" onmouseout="normal(1)" onclick="cambText(1)">
 				<p class="opciones">Inicio</p>
 			</div>
-			<div class="tabs" id="opc2">
+			<div class="tabs" id="opc2" onmouseover="cambiar(2)" onmouseout="normal(2)" onclick="cambText(2)">
 				<p class="opciones">Registrar Alumno</p>
 			</div>
-			<div class="tabs" id="opc3">
-				<p class="opciones">-----</p>
+			<div class="tabs" id="opc3" onmouseover="cambiar(3)" onmouseout="normal(3)" onclick="cambText(3)">
+				<p class="opciones">Buscar Alumno</p>
 			</div>
-			<div class="tabs" id="opc4">
-				<p class="opciones">-----</p>
+			<div class="tabs" id="opc4" onmouseover="cambiar(4)" onmouseout="normal(4)" onclick="cambText(4)">
+				<p class="opciones">Retirar Alumno</p>
 			</div>
-			<div class="tabs" id="opc5">
-				<p class="opciones">-----</p>
+			<div class="tabs" id="opc5" onmouseover="cambiar(5)" onmouseout="normal(5)" onclick="cambText(5)">
+				<p class="opciones">- - - - -</p>
 			</div>
 		</div>
-		<div id="FormuarioRegistro">
+		<div class="blockdinamic" id="Inicio">
+			<h3>INICIO</h3>
+		</div>
+		<div class="blockdinamic" id="FormularioRegistro">
 			<h4>Periodo Academico:
 				<input type="number" name="PeriodoAcademico" min="2000" max="2050">
 			</h4></p>
@@ -131,6 +135,29 @@
 				</p>Lote:
 					<input type="text" name="DireccionLote" placeholder="Lote">
 			</h4></p>
+		</div>
+		<div class="blockdinamic" id="BuscarAlumno">
+			<h3>BUSCAR ALUMNO</h3>
+			<h4>Codigo:
+				<input type="text" name="Codigo" placeholder="Codigo">
+			</h4></p>
+			<h4>Apellido Paterno:
+				<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
+			</h4></p>
+			
+			<h4>Apellido Materno:
+				<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
+			</h4></p>
+			
+			<h4>Nombres:
+				<input type="text" name="Nombres" placeholder="Nombres">
+			</h4></p>
+		</div>
+		<div class="blockdinamic" id="RetirarAlumno">
+			<h3>RETIRAR ALUMNO</h3>
+		</div>
+		<div class="blockdinamic" id="anonimo">
+			<h3>-----</h3>
 		</div>
 	</body>
 </html>
