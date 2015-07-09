@@ -100,6 +100,7 @@ function normalOpcionMatricula(x){
     document.getElementById(c).style.backgroundColor="#18F000";
 }
 
+
 //SE ENCARGA DE INTERCAMBIAR LOS DIV
 function cambiarTextMatricula(x){
 	switch(x){
@@ -112,4 +113,48 @@ function cambiarTextMatricula(x){
 	        document.getElementById("FormularioRegistro").style.display = "block";
 			break;
 	}
+}	
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//BUSCA EL DIV A CAMBIAR
+function verificarOpcionBusqueda(x){
+	switch(x){
+		case 1:
+			return "porCodigo";
+			break;
+		case 2:
+			return "porNombre";
+			break;
+	}
 }
+
+//FUNCION QUE SE ENCARGA DE CAMBIAR EL COLOR CUANDO EL PUNTERO ESTA ENCIMA DE ELLA
+function cambiarOpcionBusqueda(x){
+	var c;
+	c=verificarOpcionBusqueda(x);
+    document.getElementById(c).style.color = "black";
+    document.getElementById(c).style.backgroundColor="green";
+}
+
+//FUNCION QUE SE ENCARGA DE CAMBIAR EL COLOR CUANDO EL PUNTERO YA NO ESTAENCIMA DE ELLA
+function normalOpcionBusqueda(x){
+	var c;
+	c=verificarOpcionBusqueda(x);
+    document.getElementById(c).style.color = "white";
+    document.getElementById(c).style.backgroundColor="#18F000";
+}
+
+//SE ENCARGA DE INTERCAMBIAR LOS DIV
+function cambiarTextBusqueda(x){
+	switch(x){
+		case 1://MUESTRA EL DIV "FormuarioMatricula" Y OCULTA EL "FormularioRegistro"
+			document.getElementById("FormularioCODIGO").style.display = "block";
+			document.getElementById("FormularioNOMBRE").style.display = "none";
+			break;
+		case 2://MUESTRA EL DIV "FormularioRegistro" Y OCULTA EL "FormuarioMatricula"
+			document.getElementById("FormularioCODIGO").style.display = "none";
+	        document.getElementById("FormularioNOMBRE").style.display = "block";
+			break;
+	}
+}
+

@@ -32,7 +32,21 @@ body{
 	border-radius:25px;
 	font-size: 20px;
 	color:white;
-	margin:40px 300px;
+	margin:40px auto;
+	background-color:#18F000;
+	height:50px;
+	width:200px;
+}
+.opcionesBusqueda{
+	cursor:pointer;
+	text-align:center;
+	font-family: "Times New Roman";
+	border: 1px dashed #13B701;
+	border-radius:25px;
+	font-size: 17px;
+	font-weight:normal;
+	color:white;
+	margin:40px auto;
 	background-color:#18F000;
 	height:50px;
 	width:200px;

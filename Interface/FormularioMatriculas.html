@@ -195,21 +195,44 @@
 			
 		</div>
 		<div class="blockdinamic" id="BuscarAlumno">
-			<h3>BUSCAR ALUMNO</h3>
-			<h4>Codigo:
-				<input type="text" name="Codigo" placeholder="Codigo">
-			</h4></p>
-			<h4>Apellido Paterno:
-				<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
-			</h4></p>
+			<!-- VENTANA DE OPCIONES DE BUSQUEDA -->
+			<div id="BotonesMatricula">
 			
-			<h4>Apellido Materno:
-				<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
-			</h4></p>
+				<div class="opcionesBusqueda" id="porCodigo" onmouseover="cambiarOpcionBusqueda(1)" onmouseout="normalOpcionBusqueda(1)" onclick="cambiarTextBusqueda(2)">
+					<p style="margin:auto">BUSCAR POR CODIGO DE ALUMNO</p>
+				</div></p>
+				
+				<div class="opcionesBusqueda" id="porNombre" onmouseover="cambiarOpcionBusqueda(2)" onmouseout="normalOpcionBusqueda(2)" onclick="cambiarTextBusqueda(1)">
+					<p style="margin:auto">BUSCAR POR NOMBRE DEL ALUMNO</p>
+				</div>
+			<!--VENTANA DE BUSQUEDA POR ALUMNO-->	
+			</div>
+			<div style="display:none" id="FormularioCODIGO">
+				<h3>BUSCAR POR CODIGO</h3>
+				<h4>Codigo:
+					<input type="text" name="Codigo" placeholder="Codigo">
+				</h4></p>
+				<button Type = "Submit" >BUSCAR</button> 
+				
+			</div>
+			<!--VENTANA DE BUSQUEDA POR ALUMNO-->
 			
-			<h4>Nombres:
-				<input type="text" name="Nombres" placeholder="Nombres">
-			</h4></p>
+			<div style="display:none" id="FormularioNOMBRE">
+				<h3>BUSCAR POR NOMBRE</h3>
+				
+				<h4>Apellido Paterno*:
+					<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
+				</h4></p>
+			
+				<h4>Apellido Materno*:
+					<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
+				</h4></p>
+			
+				<h4>Nombres:
+					<input type="text" name="Nombres" placeholder="Nombres">
+				</h4></p>
+					<button Type = "Submit" >BUSCAR</button> 
+			</div>
 		</div>
 		<div class="blockdinamic" id="RetirarAlumno">
 			<h3>RETIRAR ALUMNO</h3>
