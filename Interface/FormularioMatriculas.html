@@ -5,8 +5,26 @@
 		<script src="logica.js" language="javascript" type="text/javascript"></script>
 		<title>Ficha de Registro de Matricula</title>
 	</head>
+	<style type="text/css">
+
+	 
+		#full-screen-background-image {
+			z-index: -999;
+			width: 100%;
+			height: auto;
+			position: fixed;
+			top: 0;
+			left: -14;
+		}
+	</style>
 	
-	<body style="background-color:Gainsboro">
+
+	<body>
+	
+	<img alt="full screen background image" src="fondo.png" id="full-screen-background-image" />
+	<p></p>
+
+	<table width="550" bgcolor=FFCECB align=center> 
 		<div id="menu">
 			<div class="tabs" id="opc1" onmouseover="cambiar(1)" onmouseout="normal(1)" onclick="cambText(1)">
 				<p class="opciones">Inicio</p>
@@ -36,12 +54,11 @@
 			<!-- AQUI IRIA EL LOGOUT -->
 		</div>
 		<div class="blockdinamic" id="Inicio">
-			
-			<h1 style="text-align:center">Ciencias de la computacion</h1>
-			<h1 style="text-align:center">FICHA DE REGISTROS DE MATRICULA</h1>
-			
-			<img src="bi.png" alt="W3C_validator" style="width:450px;height:280px;" class="imgcenter">
-
+			<pre>
+				<p></p>
+				<center>BIENVENIDO</center>
+				<img src="unsa.png" alt="W3C_validator" style="width:450px;height:380px;" class="imgcenter">
+			</pre>
 			
 		</div>
 		<div class="blockdinamic" id="Matricula">
@@ -61,46 +78,48 @@
 			
 		<!-- VENTANA DE MATRICULA -->
 			<div style="display:none" id="FormuarioMatricula">
-				<h4>Sede:
-					<select>
-						<option value="-----">- - - - -
-						<option value="Arequipa">Arequipa
-						<option value="Mollendo">Mollendo
-						<option value="Camana">Camana
-						<option value="Ilo">Ilo
-						<option value="Moquegua">Moquegua
-					</select>
-				</h4></p>
-				<h4>Carrera:<input type="text" name="Carrera" placeholder="Carrera">
-				</h4></p>
-				<h4>Apellido Paterno:
-					<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
-				</h4></p>
 				
-				<h4>Apellido Materno:
-					<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
-				</h4></p>
+					<h4>Sede:
+						<select>
+							<option value="-----">- - - - -
+							<option value="Arequipa">Arequipa
+							<option value="Mollendo">Mollendo
+							<option value="Camana">Camana
+							<option value="Ilo">Ilo
+							<option value="Moquegua">Moquegua
+						</select>
+					</h4></p>
+					<h4>Carrera:<input type="text" name="Carrera" placeholder="Carrera">
+					</h4></p>
+					<h4>Apellido Paterno:
+						<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
+					</h4></p>
+					
+					<h4>Apellido Materno:
+						<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
+					</h4></p>
+					
+					<h4>Nombres:
+						<input type="text" name="Nombres" placeholder="Nombres">
+					</h4></p>
+					<h4>Horario:
+						<select>
+							<option value="-----">- - - - -
+							<option value="Mañana">Mañana
+							<option value="MedioDia">Medio Dia
+							<option value="Tarde">Tarde
+							<option value="Noche">Noche
+							<option value="FinDeSemana">Fines de Semana
+						</select>
+					</h4></p>
+					<h4">Banco:<input type="text" name="Banco" placeholder="Banco">
+					</h4>
 				
-				<h4>Nombres:
-					<input type="text" name="Nombres" placeholder="Nombres">
-				</h4></p>
-				<h4>Horario:
-					<select>
-						<option value="-----">- - - - -
-						<option value="Mañana">Mañana
-						<option value="MedioDia">Medio Dia
-						<option value="Tarde">Tarde
-						<option value="Noche">Noche
-						<option value="FinDeSemana">Fines de Semana
-					</select>
-				</h4></p>
-				<h4>Banco:<input type="text" name="Banco" placeholder="Banco">
-				</h4>
 			</div>
 			
 		<!-- VENTANA DE REGISTRO -->
-			<div style="display:none" id="FormularioRegistro">
-				<h4>Periodo Academico:
+			<div style="display:none" id="FormularioRegistro" >
+				<h4">Periodo Academico:
 					<input type="number" name="PeriodoAcademico" min="2000" max="2050">
 				</h4></p>
 				
