@@ -22,14 +22,14 @@ function cambiar(x){
 	var c;
 	c=verificarOpcion(x);
     document.getElementById(c).style.color = "white";
-    document.getElementById(c).style.backgroundColor="red";
+    document.getElementById(c).style.backgroundColor="#85B4EE";
 }
 
 function normal(x){
 	var c;
 	c=verificarOpcion(x);
-	document.getElementById(c).style.color = "#A60202";
-	document.getElementById(c).style.backgroundColor="white";
+	document.getElementById(c).style.color = "#3275FC";
+	document.getElementById(c).style.backgroundColor="#B8D3F3";
 }
 
 function cambText(x){
@@ -88,8 +88,8 @@ function verificarOpcionMatricula(x){
 function cambiarOpcionMatricula(x){
 	var c;
 	c=verificarOpcionMatricula(x);
-    document.getElementById(c).style.color = "black";
-    document.getElementById(c).style.backgroundColor="green";
+    document.getElementById(c).style.color = "#2F6EC1";
+    document.getElementById(c).style.backgroundColor="#6090CB";
 }
 
 //FUNCION QUE SE ENCARGA DE CAMBIAR EL COLOR CUANDO EL PUNTERO YA NO ESTAENCIMA DE ELLA
@@ -97,7 +97,7 @@ function normalOpcionMatricula(x){
 	var c;
 	c=verificarOpcionMatricula(x);
     document.getElementById(c).style.color = "white";
-    document.getElementById(c).style.backgroundColor="#18F000";
+    document.getElementById(c).style.backgroundColor="#78A4DB";
 }
 
 
@@ -132,8 +132,8 @@ function verificarOpcionBusqueda(x){
 function cambiarOpcionBusqueda(x){
 	var c;
 	c=verificarOpcionBusqueda(x);
-    document.getElementById(c).style.color = "black";
-    document.getElementById(c).style.backgroundColor="green";
+    document.getElementById(c).style.color = "#2F6EC1";
+    document.getElementById(c).style.backgroundColor="#6090CB";
 }
 
 //FUNCION QUE SE ENCARGA DE CAMBIAR EL COLOR CUANDO EL PUNTERO YA NO ESTAENCIMA DE ELLA
@@ -141,7 +141,7 @@ function normalOpcionBusqueda(x){
 	var c;
 	c=verificarOpcionBusqueda(x);
     document.getElementById(c).style.color = "white";
-    document.getElementById(c).style.backgroundColor="#18F000";
+    document.getElementById(c).style.backgroundColor="#78A4DB";
 }
 
 //SE ENCARGA DE INTERCAMBIAR LOS DIV

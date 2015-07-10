@@ -5,26 +5,12 @@
 		<script src="logica.js" language="javascript" type="text/javascript"></script>
 		<title>Ficha de Registro de Matricula</title>
 	</head>
-	<style type="text/css">
-
-	 
-		#full-screen-background-image {
-			z-index: -999;
-			width: 100%;
-			height: auto;
-			position: fixed;
-			top: 0;
-			left: -14;
-		}
-	</style>
-	
-
 	<body>
 	
-	<img alt="full screen background image" src="fondo.png" id="full-screen-background-image" />
+	<img src="fondo.png" id="full-screen-background-image" />
 	<p></p>
 
-	<table width="550" bgcolor=FFCECB align=center> 
+	<table width="550" bgcolor=FFCECB align=center>
 		<div id="menu">
 			<div class="tabs" id="opc1" onmouseover="cambiar(1)" onmouseout="normal(1)" onclick="cambText(1)">
 				<p class="opciones">Inicio</p>
@@ -41,23 +27,13 @@
 			<div class="tabs" id="opc5" onmouseover="cambiar(5)" onmouseout="normal(5)" onclick="cambText(5)">
 				<p class="opciones">- - - - -</p>
 			</div>
-			
-			<style type="text/css">
-			IMG.imgcenter{
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-				border:none;
-			}
-			</style>
-
 			<!-- AQUI IRIA EL LOGOUT -->
 		</div>
 		<div class="blockdinamic" id="Inicio">
 			<pre>
 				<p></p>
-				<center>BIENVENIDO</center>
-				<img src="unsa.png" alt="W3C_validator" style="width:450px;height:380px;" class="imgcenter">
+				<h1>BIENVENIDO</h1>
+				<img src="unsa.png" id="imgcenter">
 			</pre>
 			
 		</div>
@@ -112,14 +88,14 @@
 							<option value="FinDeSemana">Fines de Semana
 						</select>
 					</h4></p>
-					<h4">Banco:<input type="text" name="Banco" placeholder="Banco">
+					<h4>Banco:<input type="text" name="Banco" placeholder="Banco">
 					</h4>
 				
 			</div>
 			
 		<!-- VENTANA DE REGISTRO -->
 			<div style="display:none" id="FormularioRegistro" >
-				<h4">Periodo Academico:
+				<h4>Periodo Academico:
 					<input type="number" name="PeriodoAcademico" min="2000" max="2050">
 				</h4></p>
 				
@@ -271,10 +247,10 @@
 			</div>
 		</div>
 		<div class="blockdinamic" id="RetirarAlumno">
-			<h3>RETIRAR ALUMNO</h3>
+			<h1>RETIRAR ALUMNO</h1>
 		</div>
 		<div class="blockdinamic" id="anonimo">
-			<h3>-----</h3>
+			<h1>-----</h1>
 		</div>
 	</body>
 </html>
