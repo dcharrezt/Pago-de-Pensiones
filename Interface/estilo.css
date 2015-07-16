@@ -1,98 +1,40 @@
-#full-screen-background-image {
-			z-index: -1;
-			width: 100%;
-			height: auto;
-			position: fixed;
-			top: 0;
-			left:0;
+#main{
+	background-color:white;
+	width:1000px;
+	height:650px;
+	margin:0px 150px;
+	border-radius:20px;
 }
-
-#imgcenter{
-	z-index: -1;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	border:none;
-	width:500px;
-	height:400px;
+#imagen{
+	display:block;
+	width:1000px;
+	height:105px;
+	background-color:#C4C4C4;
 }
-
-#menu{
-	height:35px;
-    width:1333px;
-    
+#tituloPrincipal{
+	float:right;
+	color:#848383;
+	font-family:Serif;
+	font-size:50px;
+	margin-right:50px;
+	margin-top:15px;
 }
-.tabs{
-	cursor: pointer;
-	border-radius:10px;
-	text-align:center;
-	border:1px dashed #3289FC;
-	display:inline-block;
-	height:30px;
+#barraMenu{
+	display:block;
+	margin-top:5px;
+	background-color:#5D5D5D;
+	width:1000px;
+	height:50px;
+}
+.Botones{
 	width:190px;
-	color:#3275FC;
-	font-size:20px;
-	margin:0px 10px;
-	background-color:#B8D3F3;
-}
-.blockdinamic{
-	display:none;
-}
-.opciones{
-	margin:auto;
-}
-.opcionesMatricula{
-	cursor:pointer;
-	text-align:center;
-	font-family: "Times New Roman";
-	border: 1px dashed blue;
-	border-radius:25px;
-	font-size: 20px;
-	color:white;
-	margin:40px auto;
-	background-color:#78A4DB;
 	height:50px;
-	width:200px;
-}
-.opcionesBusqueda{
-	cursor:pointer;
 	text-align:center;
-	font-family: "Times New Roman";
-	border: 1px dashed blue;
-	border-radius:25px;
-	font-size: 17px;
-	font-weight:normal;
 	color:white;
-	margin:40px auto;
-	background-color:#78A4DB;
-	height:50px;
-	width:200px;
-}
-h4{
-	font-family:Palatino Linotype;
-	color:#3E3CD7;
-}
-h1{
-	text-align:center;
-	font-family:initial;
-	color:#4845FC;
+	background-color:#5D5D5D;
+	display:inline-block;
+	cursor:pointer;
 }
 h3{
-	color:#455EFC;
-	font-family:Verdana,serif;
-}
-.mostrador{
-	height:400px;
-	width:500px;
-	overflow: scroll;
-	margin:80px 400px;
-	border-radius:15px;
-	background: rgba(183,222,237,1);
-	background: -moz-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 32%, rgba(183,222,237,1) 56%, rgba(183,222,237,1) 66%, rgba(113,206,239,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(183,222,237,1)), color-stop(32%, rgba(183,222,237,1)), color-stop(56%, rgba(183,222,237,1)), color-stop(66%, rgba(183,222,237,1)), color-stop(100%, rgba(113,206,239,1)));
-	background: -webkit-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 32%, rgba(183,222,237,1) 56%, rgba(183,222,237,1) 66%, rgba(113,206,239,1) 100%);
-	background: -o-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 32%, rgba(183,222,237,1) 56%, rgba(183,222,237,1) 66%, rgba(113,206,239,1) 100%);
-	background: -ms-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 32%, rgba(183,222,237,1) 56%, rgba(183,222,237,1) 66%, rgba(113,206,239,1) 100%);
-	background: linear-gradient(to right, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 32%, rgba(183,222,237,1) 56%, rgba(183,222,237,1) 66%, rgba(113,206,239,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#71ceef', GradientType=1 );
+	margin-top:10px;
 }
