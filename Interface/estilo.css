@@ -4,6 +4,7 @@
 	height:650px;
 	margin:0px 150px;
 	border-radius:20px;
+	overflow:hidden;
 }
 #imagen{
 	display:block;
@@ -35,6 +36,19 @@
 	display:inline-block;
 	cursor:pointer;
 }
+#PaginaInicio{
+	display:none;
+	width:1000px;
+	height:500px;
+	background-color:white;
+	text-align:center;
+}
 h3{
 	margin-top:10px;
+}
+h1{
+	text-align:center;
+	color:#848383;
+	font-family:Serif;
+	font-size:50px;
 }

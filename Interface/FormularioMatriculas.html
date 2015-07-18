@@ -2,6 +2,7 @@
 <html lang="es">
 	<head>
 		<link rel="stylesheet" href="estilo.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script src="logica.js" language="javascript" type="text/javascript"></script>
 	</head>
 	<body background="fondo.jpg">
@@ -15,25 +16,31 @@
 			
 			<!--BARRA DE MENU-->
 			<div id="barraMenu">
-				<div class="Botones" id="inicio" style="margin-left:15px;" onmouseover="cambiar(1)" onmouseout="normal(1)">
+				<div class="Botones" id="inicio" style="margin-left:15px;">
 					<h3>INICIO</h3>
 				</div>
 				
-				<div class="Botones" id="pago" onmouseover="cambiar(2)" onmouseout="normal(2)">
+				<div class="Botones" id="pago">
 					<h3>PAGO</h3>
 				</div>
 				
-				<div class="Botones" id="actualizar" onmouseover="cambiar(3)" onmouseout="normal(3)">
+				<div class="Botones" id="actualizar">
 					<h3>ACTUALIZAR</h3>
 				</div>
 				
-				<div class="Botones" id="constancias" onmouseover="cambiar(4)" onmouseout="normal(4)">
+				<div class="Botones" id="constancias">
 					<h3>CONSTANCIAS</h3>
 				</div>
 				
-				<div class="Botones" id="logout" onmouseover="cambiar(5)" onmouseout="normal(5)">
+				<div class="Botones" id="logout">
 					<h3>LOGOUT</h3>
 				</div>
+			</div>
+			
+			<!-- PAGINA DE INICIO O PAGINA PRINCIPAL-->
+			<div id="PaginaInicio">
+				<h1>BIENVENIDO</h1>
+				<img alt="UNSA LOGO" src="http://4.bp.blogspot.com/-4CYjfwgd-CQ/VMFjwbje5II/AAAAAAAAkts/PvB605YwrIQ/s1600/unsa.jpg" style="width:300px;height:300px;">
 			</div>
 		</div>
 	</body>
