@@ -38,9 +38,24 @@
 			</div>
 			
 			<!-- PAGINA DE INICIO O PAGINA PRINCIPAL-->
-			<div id="PaginaInicio">
+			<div class="paginas" id="PaginaInicio">
 				<h1>BIENVENIDO</h1>
-				<img alt="UNSA LOGO" src="http://4.bp.blogspot.com/-4CYjfwgd-CQ/VMFjwbje5II/AAAAAAAAkts/PvB605YwrIQ/s1600/unsa.jpg" style="width:300px;height:300px;">
+				<img alt="UNSA LOGO" src="http://4.bp.blogspot.com/-4CYjfwgd-CQ/VMFjwbje5II/AAAAAAAAkts/PvB605YwrIQ/s1600/unsa.jpg" style="width:300px;height:300px;z-index: -999;">
+			</div>
+			
+			<!-- PAGINA DE PAGO BUSCADOR DE DNI -->
+			<div class="paginas" id="PaginaPago">
+				<form action="F.html">
+					<h1>Bienvenidos al sistema de Pagos.</h1>
+					<h3 class="texto">Ingrese numero de DNI.</h3>
+					<Input type="text" name="DNI" placeholder="D.N.I." maxlength="8" size="8" pattern="[0-9]" required/>
+					<button Type = "Submit" >Buscar</button>
+				</form>
+			</div>
+			
+			<!-- PAGINA DE ACTUALIZAR -->
+			<div class="paginas" id="PaginaActualizar">
+					<h1>Actualizacion de datos</h1>
 			</div>
 		</div>
 	</body>
