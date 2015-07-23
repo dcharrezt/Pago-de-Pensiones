@@ -6,6 +6,10 @@
 	border-radius:25px;
 	color:#EDEDED;
 }
+p{
+	font-size:40px;
+	margin-left:30px;
+}
 #Paga{
 	margin:200px 400px;
 	display:none;
@@ -18,13 +22,14 @@
 h3{
 	font-size:50px;
 	margin-left:10px;
+	margin-bottom:0px;
 }
 .boton{
 	width:150px;
 	height:80px;
 	display:inline-block;
 	background-color:#848383;
-	margin-left:50px;
+	margin-left:60px;
 	text-align:center;
 	border-radius:20px;
 	cursor:pointer;
