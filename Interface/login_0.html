@@ -258,11 +258,11 @@ fieldset
 
 <body background="fondo.jpg">
 
-<form id="login"action="FormularioMatriculas.html">
+<form id="login"action="login.php" method="GET">
     <h1>Log In</h1>
     <fieldset id="inputs">
-        <input id="username" type="text" maxlength="25" placeholder="Usuario" autofocus required>   
-        <input id="password" type="password" maxlength="8" placeholder="Contraseña" required>
+        <input id="username" name="username" type="text" maxlength="25" placeholder="Usuario" autofocus required>   
+        <input id="password" name="password" type="password" maxlength="8" placeholder="Contraseña" required>
     </fieldset>
     <fieldset id="actions" action="login_0.html">
         <input type="submit" id="submit" value="Log in">
