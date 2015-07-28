@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php
+
+$link = mysql_connect("localhost", "root","");
+mysql_select_db("PensionesMatriculas",$link);
+
+$v1 = @$_REQUEST['DNI'];
+
+$result = mysql_query("select * from Estudiantes where DNI like '".$v1."' ");
+$nacimiento = mysql_query("select * from Estudiantes INNER JOIN LugarNacimiento ON Estudiantes.LugarNacimiento_idLugarNacimiento = LugarNacimiento.idLugarNacimiento
+                                                where DNI like '".$v1."' ");
+$direccion = mysql_query("select * from Estudiantes INNER JOIN Direccion ON Estudiantes.Direccion_idDireccion = Direccion.idDireccion
+                                                where DNI like '".$v1."' ");
+                                               
+$row = mysql_fetch_array($result);
+$rowNacimiento = mysql_fetch_array($nacimiento);
+$rowDireccion = mysql_fetch_array($direccion);
+
+$numero=mysql_num_rows($result);
+if  ($numero==0)
+{
+	echo "My first PHP script!";
+}
+else{
+
+echo '<!DOCTYPE html>
+
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -23,19 +48,20 @@
 					
 					<h4>
 					<label for="ApellidoPaterno">Apellido Paterno:</label>
-						<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">	
+						<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno" value =  "'.$row["ApellidoPaterno"].'">	
 					Apellido Materno:
-						<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
-					</h4></p>
+						<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno" value = "'.$row["Apellido Materno"].'">
+					</h4></p
 					
 					<h4>Nombres:
-						<input type="text" name="Nombres" placeholder="Nombres">
+						<input type="text" name="Nombres" placeholder="Nombres" value = "'.$row["Nombres"].'">
 					Fecha de Nacimiento
 						<input type="Date" name="FechaDeNacimiento">
 					</h4></p>
 					
 					<h4>Grupo Sanguineo:
 						<select>
+						        <option select = "selected"> '.$row["Grupo_Sang"].' </option>
 							<option value="-----">- - - - -
 							<option value="APositivo">A Positivo
 							<option value="ANegativo">A Negativo
@@ -54,40 +80,30 @@
 					
 					<h3>Lugar de Nacimiento:</h3></p>
 					<h4>Departamento:
-						<input type="text" name="DepartamentoNacimiento" placeholder="Departamento">
+						<input type="text" name="DepartamentoNacimiento" placeholder="Departamento" value = "'.$rowNacimiento["Departamento"].'">
 					Provincia:
-						<input type="text" name="ProvinciaNacimiento" placeholder="Provincia">
+						<input type="text" name="ProvinciaNacimiento" placeholder="Provincia" value = "'.$rowNacimiento["Provincia"].'">
 					</p>Distrito:
-						<input type="text" name="DistritoNacimiento" placeholder="Distrito">
+						<input type="text" name="DistritoNacimiento" placeholder="Distrito" value = "'.$rowNacimiento["Distrito"].'">
 					</h4></p>
 					
 					<h3>Telefono:</h3>
 					<h4>Fijo o Celular:
-						<input type="text" name="Telefono" placeholder="Telefono">
+						<input type="text" name="Telefono" placeholder="Telefono" value = "'.$row["Telefono"].'">
 					</h4></p>
 					
 					<h3>Dirección:</h3></p>
 					<h4>
-						<input type="radio" name="Direccion" value="Av.">Av.
-						<input type="radio" name="Direccion" value="Calle">Calle
-						<input type="radio" name="Direccion" value="Jiron">Jiron
-						<input type="radio" name="Direccion" value="Pasaje">Pasaje
-						<input type="radio" name="Direccion" value="Otro">Otro
-						<input type="text" name="DireccionExacta">
-						</p>
-							<input type="radio" name="DireccionLugar" value="Urbanizacion">Urbanización
-							<input type="radio" name="DireccionLugar" value="PPJJ">PP.JJ
-							<input type="radio" name="DireccionLugar" value="CHab">C.Hab.
-							<input type="radio" name="DireccionLugar" value="Otro">Otro
-							<input type="text" name="DireccionAsociacion">
+			
+				
 						</p>Distrito:
-							<input type="text" name="DistritoDireccion" placeholder="Distrito">
+							<input type="text" name="DistritoDireccion" placeholder="Distrito" value = "'.$rowDireccion["Departamento"].'">
 						Nº:
-							<input type="text" name="DireccionNumero" placeholder="Nº">
+							<input type="text" name="DireccionNumero" placeholder="Nº" value = "'.$rowDireccion["Numero"].'">
 						</p>Manzana:
-							<input type="text" name="DireccionManzana" placeholder="Manzana">
+							<input type="text" name="DireccionManzana" placeholder="Manzana" value = "'.$rowDireccion["Manzana"].'">
 						Lote:
-							<input type="text" name="DireccionLote" placeholder="Lote">
+							<input type="text" name="DireccionLote" placeholder="Lote" value = "'.$rowDireccion["Lote"].'">
 					</h4></p>
 			</form>
 		</div id="Formulario2">
@@ -95,4 +111,11 @@
 		
 		</div>
 	</body>
-</html>
+</html> ';
+}
+
+?>
+
+
+
+
