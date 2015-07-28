@@ -40,7 +40,7 @@
 @$v29=$_REQUEST['NumeroDeDocumento'];//DNI EN ESTUDIANTE
 
 
-//Crear el idestudiante que es la PrimeryKey es indispensable para ingresar
+
 $m = mysql_query("SELECT MAX(idMatriculas) AS max_page FROM matriculas");
 $row = mysql_fetch_array($m);
 $idmatri = $row["max_page"]+1;
@@ -86,17 +86,22 @@ $row = mysql_fetch_array($m);
 $idapo = $row["max_page"]+1;
 
 
-//NO FUNCIONAN SERA POR LAS PRIMARY KEY? QUIEN SEPA ALGO CORRIJALO 
-$sql4 = "INSERT INTO estudiantes(`idEstudiantes`, `Direccion_idDireccion`, `CentroTrabajo_idCentroTrabajo`,`LugarNacimiento_idLugarNacimiento`, `Apoderados_idApoderado`, `Nombres`, `ApellidoPaterno`, `Apellido Materno`, `DNI`, `Email`, `Telefono`, `Celular`, `Grupo_Sang`, `EstadoCivil`, `Foto`)VALUES ('$idest','$iddirec','$idtrab','$idnaci','$idapo','$v6','$v4','$v5','$v29','$v17','$v15','','$v8','$v11','')";
 
-
-//FUNCIONAN OK
-$sql2 = "INSERT INTO carrera(`idCarrera`, `Nombre`, `Duracion`)VALUES('$idcar','$v2','')";
-$sql1 = "INSERT INTO sede(`idSede`, `Departamento`, `Ciudad`, `Direccion`, `Telefono`)VALUES('$idsede', '', '$v1','','')";
+$sql2 = "INSERT INTO carrera(`idCarrera`, `Nombre`, `Duracion`)
+VALUES('$idcar','$v2','')";
+$sql1 = "INSERT INTO sede(`idSede`, `Departamento`, `Ciudad`, `Direccion`, `Telefono`)
+VALUES('$idsede', '', '$v1','','')";
 $sql3 = "INSERT INTO turno(`idTurno`, `Dias`, `Horario`)VALUES('$idturno','','$v3')";
-$sql6 = "INSERT INTO `direccion`(`idDireccion`, `TipoDeLugar`, `NombredelLugar_tipo`, `StatusDelLugar`, `NombredelLugar_status`, `Numero`, `Departamento`, `Manzana`, `Lote`, `Distrito`) VALUES ('$iddirec','$v19','$v18','$v16','$v20','$v22','','$v23','$v24','$v21')";
-$sql7 = "INSERT INTO apoderados(`idApoderado`, `Nombre`, `ApellidoPaterno`, `ApellidoMaterno`, `idDireccion`, `Telefono`, `Celular`)VALUES ('$idapo','$v27','$v25','$v26','$iddirec','$v28','')";
-$sql5 = "INSERT INTO lugarnacimiento(`idLugarNacimiento`, `Departamento`, `Provincia`, `Distrito`, `Fecha`) VALUES ('$idnaci','$v12','$v13','$v14','$v7')";
+$sql5 = "INSERT INTO lugarnacimiento(`idLugarNacimiento`, `Departamento`, `Provincia`, `Distrito`, `Fecha`) 
+VALUES ('$idnaci','$v12','$v13','$v14','$v7')";
+$sql7 = "INSERT INTO apoderados(`idApoderado`, `Nombre`, `ApellidoPaterno`, `ApellidoMaterno`, `Telefono`, `Celular`)
+VALUES ('$idapo','$v27','$v25','$v26','$v28','')";
+$sql6 = "INSERT INTO `direccion`(`idDireccion`, `Dreccion`, `Distrito`, `Numero`, `Departamento`, `Manzana`, `Lote`) 
+VALUES ('$iddirec','$v18','$v21','$v22','v12','$v23','$v24')";
+
+
+$sql4 = "INSERT INTO estudiantes(`idEstudiantes`,`Direccion_idDireccion`,`LugarNacimiento_idLugarNacimiento`,`Apoderados_idApoderado`,`Nombres`,`ApellidoPaterno`,`Apellido Materno`,`DNI`,`Email`,`Telefono`,`Celular`,`Grupo_Sang`,`EstadoCivil`,`Foto`)
+VALUES('$idest','$iddirec','$idnaci','$idapo','$v6','$v4','$v5','$v29','$v17','$v15','','$v8','$v11','')";
 
 
 mysql_query($sql1);
@@ -105,6 +110,8 @@ mysql_query($sql3);
 mysql_query($sql5);
 mysql_query($sql6);
 mysql_query($sql7);
+
+
 mysql_query($sql4);
 
 ?>
