@@ -7,6 +7,7 @@
 	</head>
 	
 	<body background="fondo.jpg" text="white">
+	<form action="matricula.php" method="GET">
 	
 		<div id="mostrador">
 			<h2>MATRICULAR ALUMNO</h2>
@@ -24,6 +25,32 @@
 			<h4>Nombres:
 				<input  class="input"type="text" name="Nombres" placeholder="Nombres">
 			</h4></p>
+ 
+			<h4>DNI:
+				<input  class="input"type="text" name="DNI" placeholder="DNI">
+			</h4></p>
+ 
+			
+			<h4>Departamento actual donde vive:
+			<input  class="input"type="text" name="DirecciondeDepartamento" placeholder="Departamento">
+			</h4></p>
+			<!--	
+			<h4>Distrito:
+			<input  class="input"type="text" name="Distrito" placeholder="Nombres">
+			</h4></p>
+			
+			<h4>Urbanizacion:
+			<input  class="input"type="text" name="Manzana" placeholder="Nombres">
+			</h4></p>
+			
+			<h4>Calle Avenida o Jiron:
+			<input  class="input"type="text" name="Lote" placeholder="Direccion">
+			</h4></p>
+			
+			<h4>Numero de Vivienda:
+			<input  class="input"type="text" name="Numero" placeholder="Direccion">
+			</h4></p> -->
+			
 			
 			<h4>Fecha de Nacimiento
 				<input class="input" type="Date" name="FechaDeNacimiento">
@@ -38,8 +65,13 @@
 					Email:
 					<input class="input" type="text" name="Email" placeholder="Email">
 				</h4></p>
+			<h4>Nombre del Apoderado:
+			<input  class="input"type="text" name="NombredeApoderado" placeholder="NombredeApoderado">
+			</h4></p>
+			
 			<button type="Submit">ENVIAR</button>
 		</div>
-		
+	</form>
+	
 	</body>
 </html>
