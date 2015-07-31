@@ -53,14 +53,13 @@ VALUES ('$idapo','$v13','','','','')";
 $sql4 = "INSERT INTO estudiantes(`idEstudiantes`,`Direccion_idDireccion`,`LugarNacimiento_idLugarNacimiento`,`Apoderados_idApoderado`,`Nombres`,`ApellidoPaterno`,`Apellido Materno`,`DNI`,`Email`,`Telefono`,`Celular`,`Grupo_Sang`,`EstadoCivil`,`Foto`)
 VALUES('$idest','$iddirec','$idnaci','$idapo','$v3','$v1','$v2','$v14','$v7','$v6','','','$v5','')";
 
-
 mysql_query($sql1);
 mysql_query($sql2);
 mysql_query($sql3);
 mysql_query($sql4);
 
-
-
+//echo '<script>alert("El alumno fue registrado correctamente")</script>';
+header('Location:FormularioMatriculas.html');
 ?>
 
 
