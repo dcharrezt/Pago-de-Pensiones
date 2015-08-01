@@ -1,9 +1,29 @@
-<form action="registrar.php" method="GET">
-					</h4></p>
-					<h4>CODIGO:<input type="text" name="Codigo" placeholder="Codigo">
-					</h4></p>
-					<h4>Sede:
-						<select name = "NomCiudad">
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="logics.js" language="javascript" type="text/javascript"></script>
+	</head>
+	
+	<body background="fondo.jpg" text="white">
+	<form action="registrar.php" method="GET">
+	
+		<div id="mostrador">
+			<h2>REGISTRAR ALUMNO</h2>
+			<!-- ************************************************************** -->
+			<!-- ************AQUI IRA EL FORMULARIO DE MATRICULA*************** -->
+			<!-- ************************************************************** 
+			<h4>Carrera:
+						<select class="input">
+							<option value="-----">- - - - -
+							<option value="ComputerScience">Ciencia de la computacion
+							<option value="Medicina">Medicina
+							<option value="Civil">Civil
+						</select>
+			</h4></p>
+			<h4>Sede:
+						<select class="input">
 							<option value="-----">- - - - -
 							<option value="Arequipa">Arequipa
 							<option value="Mollendo">Mollendo
@@ -11,27 +31,48 @@
 							<option value="Ilo">Ilo
 							<option value="Moquegua">Moquegua
 						</select>
-					</h4></p>
-					<h4>Carrera:<input type="text" name="NomCarrera" placeholder="Carrera">
-					</h4></p>
-					<h4>Horario:
-						<select name = "Horarios">
-							<option value="-----">- - - - -
-							<option value="Mañana">Mañana
-							<option value="MedioDia">Medio Dia
-							<option value="Tarde">Tarde
-							<option value="Noche">Noche
-							<option value="FinDeSemana">Fines de Semana
-						</select>
-					
-					</h4></p>
-					<h4>Banco:<input type="text" name="NombreDeBanco" placeholder="Banco">
-					</h4>
-					<h4>CODIGO DE PAGO:<input type="text" name="CodigoPago" placeholder="Codigo">
-					</h4>
-					<h4>MONTO DE PAGO:<input type="text" name="Monto" placeholder="Monto">
-					</h4>
-					
-					</p>
-				<button ty="Submit">ENVIAR</button>
-			<!--BOTON DE REGISTRAR ALUMNO-->
+					</h4></p>-->
+			<h4>Apellido Paterno:
+				<input class="input" type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
+			</h4></p>
+				
+			<h4>Apellido Materno:
+				<input class="input" type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
+			</h4></p>
+			
+			<h4>Nombres:
+				<input  class="input"type="text" name="Nombres" placeholder="Nombres">
+			</h4></p>
+ 
+			<h4>DNI:
+				<input  class="input"type="text" name="DNI" placeholder="DNI">
+			</h4></p>
+ 
+			
+			<h4>Departamento actual donde vive:
+			<input  class="input"type="text" name="DirecciondeDepartamento" placeholder="Departamento">
+			</h4></p>
+			
+			<h4>Fecha de Nacimiento
+				<input class="input" type="Date" name="FechaDeNacimiento">
+			</h4></p>
+			<h3>Estado Civil:</h3><h4></p>
+				<input type="radio" name="EstadoCivil" value="Soltero">Soltero(a)
+				<input type="radio" name="EstadoCivil" value="Casado">Casado
+			</h4></p>
+			<h3>Telefono:</h3>
+				<h4>Fijo o Celular:
+					<input class="input" type="text" name="Telefono" placeholder="Telefono" pattern="[0-9]{7}"></p>
+					Email:
+					<input class="input" type="text" name="Email" placeholder="Email">
+				</h4></p>
+			<h4>Nombre del Apoderado:
+			<input  class="input"type="text" name="NombredeApoderado" placeholder="NombredeApoderado">
+			</h4></p>
+			
+			<button type="Submit">ENVIAR</button>
+		</div>
+	</form>
+	
+	</body>
+</html>
