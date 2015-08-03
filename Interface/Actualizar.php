@@ -1,14 +1,14 @@
 <?php
 
 $link = mysql_connect("localhost", "root","");
-mysql_select_db("PensionesMatriculas",$link);
+mysql_select_db("pensionesmatriculas",$link);
 
 $v1 = @$_REQUEST['DNI'];
 
-$result = mysql_query("select * from Estudiantes where DNI like '".$v1."' ");
-$nacimiento = mysql_query("select * from Estudiantes INNER JOIN LugarNacimiento ON Estudiantes.LugarNacimiento_idLugarNacimiento = LugarNacimiento.idLugarNacimiento
+$result = mysql_query("select * from estudiantes where DNI like '".$v1."' ");
+$nacimiento = mysql_query("select * from estudiantes INNER JOIN lugarnacimiento ON estudiantes.LugarNacimiento_idLugarNacimiento = lugarnacimiento.idLugarNacimiento
                                                 where DNI like '".$v1."' ");
-$direccion = mysql_query("select * from Estudiantes INNER JOIN Direccion ON Estudiantes.Direccion_idDireccion = Direccion.idDireccion
+$direccion = mysql_query("select * from estudiantes INNER JOIN direccion ON estudiantes.Direccion_idDireccion = direccion.idDireccion
                                                 where DNI like '".$v1."' ");
                                                
 $row = mysql_fetch_array($result);
@@ -18,7 +18,7 @@ $rowDireccion = mysql_fetch_array($direccion);
 $numero=mysql_num_rows($result);
 if  ($numero==0)
 {
-	echo "My first PHP script!";
+	echo '  <script>alert("El alumno con ese DNI no existe en la DB.")</script> ';
 }
 else{
 
@@ -51,7 +51,7 @@ echo '<!DOCTYPE html>
 						<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno" value =  "'.$row["ApellidoPaterno"].'">	
 					Apellido Materno:
 						<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno" value = "'.$row["Apellido Materno"].'">
-					</h4></p
+					</h4></p>
 					
 					<h4>Nombres:
 						<input type="text" name="Nombres" placeholder="Nombres" value = "'.$row["Nombres"].'">

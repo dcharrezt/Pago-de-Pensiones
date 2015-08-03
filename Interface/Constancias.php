@@ -1,34 +1,32 @@
 <?php
 
 $link = mysql_connect("localhost", "root","");
-mysql_select_db("PensionesMatriculas",$link);
+mysql_select_db("pensionesmatriculas",$link);
 
 $v1 = @$_REQUEST['DNI'];
 
-$result = mysql_query("SELECT * from Estudiantes where DNI like '".$v1."' ");
-$carreras = mysql_query ( " SELECT * from (SELECT * from Estudiantes INNER JOIN Matriculas ON Estudiantes.idEstudiantes = Matriculas.Estudiantes_idEstudiantes 
-                                                WHERE DNI like '".$v1."' ) as X INNER JOIN Carrera ON X.Carrera_idCarrera = Carrera.idCarrera  ");
-$pagos = mysql_query (" SELECT * from (SELECT * from (SELECT idMatriculas from Estudiantes INNER JOIN Matriculas ON Estudiantes.idEstudiantes = Matriculas.Estudiantes_idEstudiantes      
-                                             WHERE DNI like '".$v1."') as X INNER JOIN Pensiones ON X.idMatriculas = Pensiones.Matriculas_idMatriculas ) as Z INNER JOIN Pagos ON Z.Pagos_idPagos = Pagos.idPagos ");
+$result = mysql_query("SELECT * from estudiantes where DNI like '".$v1."' ");
+$carreras = mysql_query ( " SELECT * from (SELECT * from estudiantes INNER JOIN matriculas ON estudiantes.idEstudiantes = matriculas.Estudiantes_idEstudiantes 
+                                                WHERE DNI like '".$v1."' ) as X INNER JOIN carrera ON X.Carrera_idCarrera = carrera.idCarrera  ");
+$pagos = mysql_query (" SELECT * from (SELECT * from (SELECT idMatriculas from estudiantes INNER JOIN matriculas ON estudiantes.idEstudiantes = 
+                                                matriculas.Estudiantes_idEstudiantes WHERE DNI like '".$v1."') as X INNER JOIN pensiones ON X.idMatriculas = pensiones.Matriculas_idMatriculas ) 
+                                                as Z INNER JOIN pagos ON Z.Pagos_idPagos = pagos.idPagos ");
                                        
 $nombres = mysql_fetch_array($result);
-
 $numeroCarreras = mysql_num_rows($carreras);
 $numeroPagos = mysql_num_rows($pagos);
-
-                /*DARLE FORMATO*/
-echo '      '.$nombres["ApellidoPaterno"].'	
-                '.$nombres["Apellido Materno"].'
-                '.$nombres["Nombres"].' 
-                ';
                 
 if ( $numeroCarreras == 0)
 {
         echo "EL DNI INGRESADO NO TIENE CARRERAS !";
 }
 else
-{
-        for ($i=0; $i<$numeroCarreras; $i++)
+{                     /*DARLE FORMATO*/
+        echo '      '.$nombres["ApellidoPaterno"].'	
+                        '.$nombres["Apellido Materno"].'
+                        '.$nombres["Nombres"].' 
+                        ';
+       for ($i=0; $i<$numeroCarreras; $i++)
         {
                 $infoCarreras = mysql_fetch_array($carreras);
                 echo ''.$infoCarreras["Nombre"].'';
