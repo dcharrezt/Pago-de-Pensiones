@@ -1,0 +1,43 @@
+<form action="pagarpension.php" method="GET">
+			
+	<h4>DNI DEL ALUMNO:
+	<input type="text" name="Dni"></h4><p>
+			
+	<h4>NOMBRE DEL BANCO:
+		<select type="text" name="CodigodeBanco">
+			<option value="-----">- - - - -
+			<option value="1">Banco de la Nacion
+			<option value="2">Banco Central del Peru
+			<option value="3">Interbank
+		</select></h4><p>
+
+	<h4>Carrera:
+		<select name="IDCarrera">
+			<option value="-----">- - - - -
+			<option value="1">Ciencia de la Computacion
+			<option value="2">Medicina
+			<option value="3">Ingeneria Civil
+			<option value="4">Turismo
+			<option value="5">Derecho
+			<option value="6">Agronomia
+		</select>
+		
+		<h4>Mes a pagar:
+		<select name="Mes">
+				<option value="-----">- - - - -
+				<option value="abril">Abril
+				<option value="mayo">Mayo
+				<option value="junio">Junio
+				<option value="julio">Julio
+				<option value="agosto">Agosto
+				<option value="setiembre">Setiembre
+				<option value="octubre">Octubre
+				<option value="noviembre">Noviembre
+				<option value="diciembre">Diciembre
+		</select>
+		</h4></p>
+	
+		<h4>INGRESE EL MONTO DEL BAUCHER:
+		<input type="text" name="Monto"></h4><p>
+		<button ty="Submit">ENVIAR</button>
+</form>			
