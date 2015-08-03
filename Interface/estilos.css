@@ -1,0 +1,51 @@
+#mostrador{
+	margin:200px 400px;
+	width:500px;
+	height:300px;
+	background-color:#C4C4C4;
+	border-radius:25px;
+	color:white;
+}
+select{
+	background: #eeeeee;
+    border: none;
+    border-radius: .5em;
+	margin-bottom: 1em;
+    padding: .5em .6em;
+}
+p{
+	font-size:40px;
+	margin-left:30px;
+}
+#Paga{
+	margin:100px 400px;
+	display:none;
+	width:500px;
+	height:400px;
+	background-color:#C4C4C4;
+	border-radius:25px;
+	color:#EDEDED;
+}
+button{
+	margin-left:300px;
+	border-radius:5px;
+}
+h3{
+	font-size:50px;
+	margin-left:10px;
+	margin-bottom:0px;
+}
+.boton{
+	width:150px;
+	height:80px;
+	display:inline-block;
+	background-color:#848383;
+	margin-left:60px;
+	text-align:center;
+	border-radius:20px;
+	cursor:pointer;
+	color:white;
+}
+span{
+	font-size:30px;
+}

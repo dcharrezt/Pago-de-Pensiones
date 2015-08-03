@@ -1,221 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<meta charset="UTF-8">
 		<link rel="stylesheet" href="estilo.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script src="logica.js" language="javascript" type="text/javascript"></script>
-		<title>Ficha de Registro de Matricula</title>
 	</head>
-	<body>
-		<div id="menu">
-			<div class="tabs" id="opc1" onmouseover="cambiar(1)" onmouseout="normal(1)" onclick="cambText(1)">
-				<p class="opciones">Inicio</p>
-			</div>
-			<div class="tabs" id="opc2" onmouseover="cambiar(2)" onmouseout="normal(2)" onclick="cambText(2)">
-				<p class="opciones">Matricular Alumno</p>
-			</div>
-			<div class="tabs" id="opc3" onmouseover="cambiar(3)" onmouseout="normal(3)" onclick="cambText(3)">
-				<p class="opciones">Buscar Alumno</p>
-			</div>
-			<div class="tabs" id="opc4" onmouseover="cambiar(4)" onmouseout="normal(4)" onclick="cambText(4)">
-				<p class="opciones">Retirar Alumno</p>
-			</div>
-			<div class="tabs" id="opc5" onmouseover="cambiar(5)" onmouseout="normal(5)" onclick="cambText(5)">
-				<p class="opciones">- - - - -</p>
-			</div>
-			<!-- AQUI IRIA EL LOGOUT -->
-		</div>
-		<div class="blockdinamic" id="Inicio">
-			<h3>INICIO</h3>
-		</div>
-		<div class="blockdinamic" id="Matricula">
+	<body background="fondo.jpg">
+		<div id="main">
 		
-			<!-- VENTANA DE OPCIONES DE MATRICULA -->
-			<div id="BotonesMatricula">
+			<!-- ********************************************************** -->
+			<!-- *********************CAJA DE LA IMAGEN******************** -->
+			<!-- ********************************************************** -->
+			<div id="imagen">
+				<img src="unsa.png" style="margin-left:35px;margin-top:8px"/>
+				<h1 id="tituloPrincipal">PAGO DE PENSIONES</h1>
+			</div>
 			
-				<div class="opcionesMatricula" id="Registrar" onmouseover="cambiarOpcionMatricula(1)" onmouseout="normalOpcionMatricula(1)" onclick="cambiarTextMatricula(2)">
-					<p style="margin:auto">REGISTRAR ALUMNO</p>
-				</div></p>
-				
-				<div class="opcionesMatricula" id="Matricular" onmouseover="cambiarOpcionMatricula(2)" onmouseout="normalOpcionMatricula(2)" onclick="cambiarTextMatricula(1)">
-					<p style="margin:auto">MATRICULAR ALUMNO</p>
+			<!-- ********************************************************** -->
+			<!-- ********************BARRA DE MENU************************* -->
+			<!-- ********************************************************** -->
+			<div id="barraMenu">
+				<div class="Botones" id="inicio" style="margin-left:15px;">
+					<h3>INICIO</h3>
 				</div>
 				
+				<div class="Botones" id="pago">
+					<h3>PAGO</h3>
+				</div>
+				
+				<div class="Botones" id="actualizar">
+					<h3>ACTUALIZAR</h3>
+				</div>
+				
+				<div class="Botones" id="constancias">
+					<h3>CONSTANCIAS</h3>
+				</div>
+				
+				<a href="login_0.html">
+					<div class="Botones" id="logout">
+						<h3>LOGOUT</h3>
+					</div>
+				</a>
 			</div>
 			
-		<!-- VENTANA DE MATRICULA -->
-			<div style="display:none" id="FormuarioMatricula">
-				<h4>Sede:
-					<select>
-						<option value="-----">- - - - -
-						<option value="Arequipa">Arequipa
-						<option value="Mollendo">Mollendo
-						<option value="Camana">Camana
-						<option value="Ilo">Ilo
-						<option value="Moquegua">Moquegua
-					</select>
-				</h4></p>
-				<h4>Carrera:<input type="text" name="Carrera" placeholder="Carrera">
-				</h4></p>
-				<h4>Apellido Paterno:
-					<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
-				</h4></p>
-				
-				<h4>Apellido Materno:
-					<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
-				</h4></p>
-				
-				<h4>Nombres:
-					<input type="text" name="Nombres" placeholder="Nombres">
-				</h4></p>
-				<h4>Horario:
-					<select>
-						<option value="-----">- - - - -
-						<option value="Mañana">Mañana
-						<option value="MedioDia">Medio Dia
-						<option value="Tarde">Tarde
-						<option value="Noche">Noche
-						<option value="FinDeSemana">Fines de Semana
-					</select>
-				</h4></p>
-				<h4>Banco:<input type="text" name="Banco" placeholder="Banco">
-				</h4>
+			<!-- ********************************************************** -->
+			<!-- ***********PAGINA DE INICIO O PAGINA PRINCIPAL************ -->
+			<!-- ********************************************************** -->
+			<div class="paginas" id="PaginaInicio">
+				<h1>BIENVENIDO</h1>
+				<img alt="UNSA LOGO" src="http://4.bp.blogspot.com/-4CYjfwgd-CQ/VMFjwbje5II/AAAAAAAAkts/PvB605YwrIQ/s1600/unsa.jpg" style="width:300px;height:300px;z-index: -999;">
 			</div>
 			
-		<!-- VENTANA DE REGISTRO -->
-			<div style="display:none" id="FormularioRegistro">
-				<h4>Periodo Academico:
-					<input type="number" name="PeriodoAcademico" min="2000" max="2050">
-				</h4></p>
-				
-				<h4>Sede:
-					<select>
-						<option value="-----">- - - - -
-						<option value="Arequipa">Arequipa
-						<option value="Mollendo">Mollendo
-						<option value="Camana">Camana
-						<option value="Ilo">Ilo
-						<option value="Moquegua">Moquegua
-					</select>
-				</h4></p>
-				
-				<h4>Carrera:
-					<input type="text" name="Carrera" placeholder="Carrera">
-				</h4></p>
-				
-				<h4>Horario:
-					<select>
-						<option value="-----">- - - - -
-						<option value="Mañana">Mañana
-						<option value="MedioDia">Medio Dia
-						<option value="Tarde">Tarde
-						<option value="Noche">Noche
-						<option value="FinDeSemana">Fines de Semana
-					</select>
-				</h4></p>
-				
-				<h4>Apellido Paterno:
-					<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
-				</h4></p>
-				
-				<h4>Apellido Materno:
-					<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
-				</h4></p>
-				
-				<h4>Nombres:
-					<input type="text" name="Nombres" placeholder="Nombres">
-				</h4></p>
-				
-				<h4>Fecha de Nacimiento
-					<input type="Date" name="FechaDeNacimiento">
-				</h4></p>
-				
-				<h4>Grupo Sanguineo:
-					<select>
-						<option value="-----">- - - - -
-						<option value="APositivo">A Positivo
-						<option value="ANegativo">A Negativo
-						<option value="BPositivo">B Positivo
-						<option value="BNegativo">B Negativo
-						<option value="ABPositivo">AB Positivo
-						<option value="ABNegativo">AB Negativo
-						<option value="OPositivo">O Positivo
-						<option value="ONegativo">O Negativo
-					</select>
-				</h4></p>
-				
-				<h3>Documento Civil:</h3><h4></p>
-					<input type="radio" name="DocumentoCivil" value="PartidaDeNacimiento">Partida de Nacimiento
-					<input type="radio" name="DocumentoCivil" value="DNI">D.N.I.
-					<input type="text" name="NumeroDeDocumento" placeholder="Numero">
-				</h4></p>
-				
-				<h3>Estado Civil:</h3><h4></p>
-					<input type="radio" name="EstadoCivil" value="Soltero">Soltero(a)
-					<input type="radio" name="EstadoCivil" value="Casado">Casado
-				</h4></p>
-				
-				<h3>Lugar de Nacimiento:</h3></p>
-				<h4>Departamento:
-					<input type="text" name="DepartamentoNacimiento" placeholder="Departamento">
-				</p>Provincia:
-					<input type="text" name="ProvinciaNacimiento" placeholder="Provincia">
-				</p>Distrito:
-					<input type="text" name="DistritoNacimiento" placeholder="Distrito">
-				</h4></p>
-				
-				<h3>Telefono:</h3>
-				<h4>Fijo o Celular:
-					<input type="text" name="Telefono" placeholder="Telefono">
-				</h4></p>
-				
-				<h3>Dirección:</h3></p>
-				<h4>
-					<input type="radio" name="Direccion" value="Av.">Av.
-					<input type="radio" name="Direccion" value="Calle">Calle
-					<input type="radio" name="Direccion" value="Jiron">Jiron
-					<input type="radio" name="Direccion" value="Pasaje">Pasaje
-					<input type="radio" name="Direccion" value="Otro">Otro
-					<input type="text" name="DireccionExacta">
-					</p>
-						<input type="radio" name="DireccionLugar" value="Urbanizacion">Urbanización
-						<input type="radio" name="DireccionLugar" value="PPJJ">PP.JJ
-						<input type="radio" name="DireccionLugar" value="CHab">C.Hab.
-						<input type="radio" name="DireccionLugar" value="Otro">Otro
-						<input type="text" name="DireccionAsociacion">
-					</p>Distrito:
-						<input type="text" name="DistritoDireccion" placeholder="Distrito">
-					</p>Nº:
-						<input type="text" name="DireccionNumero" placeholder="Nº">
-					</p>Manzana:
-						<input type="text" name="DireccionManzana" placeholder="Manzana">
-					</p>Lote:
-						<input type="text" name="DireccionLote" placeholder="Lote">
-				</h4></p>
+			<!-- ********************************************************** -->
+			<!-- *************PAGINA DE PAGO BUSCADOR DE DNI*************** -->
+			<!-- ********************************************************** -->
+			<div class="paginas" id="PaginaPago">
+				<form action="Busqueda.php">
+					<h1>Bienvenidos al sistema de Pagos.</h1>
+					<h3 class="texto">Ingrese numero de DNI.</h3>
+					<Input type="text" name="DNI" placeholder="D.N.I."  maxlength="8" size="8" pattern="[0-9]{8}" required/>
+					<button Type = "Submit" >Buscar</button>
+				</form>
 			</div>
 			
-		</div>
-		<div class="blockdinamic" id="BuscarAlumno">
-			<h3>BUSCAR ALUMNO</h3>
-			<h4>Codigo:
-				<input type="text" name="Codigo" placeholder="Codigo">
-			</h4></p>
-			<h4>Apellido Paterno:
-				<input type="text" name="ApellidoPaterno" placeholder="Apellido Paterno">
-			</h4></p>
+			<!-- **************************************************************************** -->
+			<!-- ***********************PAGINA DE ACTUALIZAR ******************************** -->
+			<!-- **************************************************************************** -->
+			<div class="paginas" id="PaginaActualizar">
+				<form action="Actualizar.php">
+					<h1>Para Actualizar los datos de un alumno </h1>
+					<h3 class="texto">Ingrese numero de DNI.</h3>
+					<Input type="text" name="DNI" placeholder="D.N.I."  maxlength="8" size="8" pattern="[0-9]{8}" required/>
+					<button Type = "Submit" >Buscar</button>
+				</form>
+			</div>
+			<!-- **************************************************************************** -->
+			<!-- ***********************PAGINA DE CONSTANCIAS ******************************* -->
+			<!-- **************************************************************************** -->
+			<div class="paginas" id="PaginaConstancias">
+				<form action="Constancias.php">
+					<h1>Constancia </h1>
+					<h3 class="texto">Ingrese numero de DNI.</h3>
+					<Input type="text" name="DNI" placeholder="D.N.I."  maxlength="8" size="8" pattern="[0-9]{8}" required/>
+					<button Type = "Submit" >Buscar</button>
+				</form>
+			</div>
 			
-			<h4>Apellido Materno:
-				<input type="text" name="ApellidoMaterno" placeholder="Apellido Materno">
-			</h4></p>
-			
-			<h4>Nombres:
-				<input type="text" name="Nombres" placeholder="Nombres">
-			</h4></p>
-		</div>
-		<div class="blockdinamic" id="RetirarAlumno">
-			<h3>RETIRAR ALUMNO</h3>
-		</div>
-		<div class="blockdinamic" id="anonimo">
-			<h3>-----</h3>
 		</div>
 	</body>
 </html>
